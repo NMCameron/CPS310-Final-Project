@@ -1,7 +1,7 @@
 [
   {
     "name": "Chicken Alfredo",
-    "category": "Dinner",
+    "category": ["Dinner"],
     "servings": 4,
     "prep_time": 15,
     "cook_time": 25,
@@ -30,7 +30,7 @@
   },
   {
     "name": "Turkey Taco Bowls",
-    "category": "Dinner",
+    "category": ["Dinner"],
     "servings": 4,
     "prep_time": 10,
     "cook_time": 20,
@@ -59,7 +59,7 @@
   },
   {
     "name": "Greek Yogurt Parfait",
-    "category": "Breakfast",
+    "category": ["Breakfast"],
     "servings": 1,
     "prep_time": 5,
     "cook_time": 0,
@@ -83,7 +83,7 @@
   },
   {
     "name": "Veggie Omelet",
-    "category": "Breakfast",
+    "category": ["Breakfast"],
     "servings": 1,
     "prep_time": 5,
     "cook_time": 10,
@@ -107,7 +107,7 @@
   },
   {
     "name": "Chicken Caesar Wrap",
-    "category": "Lunch",
+    "category": ["Lunch"],
     "servings": 2,
     "prep_time": 10,
     "cook_time": 10,
@@ -136,7 +136,7 @@
   },
   {
     "name": "Tomato Basil Pasta",
-    "category": "Dinner",
+    "category": ["Dinner"],
     "servings": 4,
     "prep_time": 10,
     "cook_time": 20,
@@ -165,7 +165,7 @@
   },
   {
     "name": "Peanut Butter Banana Oatmeal",
-    "category": "Breakfast",
+    "category": ["Breakfast"],
     "servings": 1,
     "prep_time": 5,
     "cook_time": 5,
@@ -194,7 +194,7 @@
   },
   {
     "name": "Black Bean Quesadillas",
-    "category": "Lunch",
+    "category": ["Lunch"],
     "servings": 2,
     "prep_time": 10,
     "cook_time": 10,
@@ -223,7 +223,7 @@
   },
   {
     "name": "Honey Garlic Salmon",
-    "category": "Dinner",
+    "category": ["Dinner"],
     "servings": 4,
     "prep_time": 10,
     "cook_time": 15,
@@ -252,7 +252,7 @@
   },
   {
     "name": "Berry Smoothie",
-    "category": "Snack",
+    "category": ["Snack"],
     "servings": 1,
     "prep_time": 5,
     "cook_time": 0,
