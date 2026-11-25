@@ -31,5 +31,19 @@ def filter_by_category(recipes, category):
     return [
         recipe
         for recipe in recipes
-        if recipe["category"].lower() == category
+        if category in [tag.lower() for tag in recipe["category"]]
     ]
+
+
+def favorite_recipe(recipes, recipe_number):
+    """Add the Favorite category to a selected recipe."""
+    if recipe_number < 1 or recipe_number > len(recipes):
+        return False
+
+    recipe = recipes[recipe_number - 1]
+
+    if "Favorite" in recipe["category"]:
+        return False
+
+    recipe["category"].append("Favorite")
+    return True
