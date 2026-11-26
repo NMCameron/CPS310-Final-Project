@@ -2,7 +2,7 @@
 
 import json
 
-from recipe_utils import filter_by_category, load_config, load_recipes, search_by_name, favorite_recipe
+from recipe_utils import filter_by_category, load_config, load_recipes, search_by_name, favorite_recipe, random_meal_suggestion
 
 
 def test_search_by_name_finds_partial_match():
@@ -118,3 +118,27 @@ def test_filter_by_category_returns_empty_favorites():
     ]
     result = filter_by_category(recipes, "Favorite")
     assert result == []
+
+
+def test_random_meal_suggestion():
+    recipes = [
+        {"name": "Chicken Alfredo", "category": ["Dinner"]},
+        {"name": "Berry Smoothie", "category": ["Snack"]},
+    ]
+    result = random_meal_suggestion(recipes)
+    assert result in recipes
+
+
+def test_random_meal_suggestion_returns_one_recipe():
+    recipes = [
+        {"name": "Chicken Alfredo", "category": ["Dinner"]},
+        {"name": "Berry Smoothie", "category": ["Snack"]},
+    ]
+    result = random_meal_suggestion(recipes)
+    assert type(result) == dict
+
+
+def test_random_meal_suggestion_empty_recipes():
+    recipes = []
+    result = random_meal_suggestion(recipes)
+    assert result is None
