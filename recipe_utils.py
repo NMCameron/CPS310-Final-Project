@@ -1,6 +1,6 @@
 """Utility functions for the Recipe & Meal Planner."""
 
-import json
+import json, random
 
 
 def load_config(filename):
@@ -47,3 +47,10 @@ def favorite_recipe(recipes, recipe_number):
 
     recipe["category"].append("Favorite")
     return True
+
+def random_meal_suggestion(recipes):
+    """Return a randomly selected recipe"""
+    if not recipes:
+        return None
+
+    return random.choice(recipes)

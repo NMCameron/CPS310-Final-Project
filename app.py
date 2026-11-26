@@ -1,7 +1,6 @@
 """CPS 310 Recipe & Meal Planner starter application."""
 
-from recipe_utils import filter_by_category, load_config, load_recipes, search_by_name, favorite_recipe
-
+from recipe_utils import filter_by_category, load_config, load_recipes, search_by_name, favorite_recipe, random_meal_suggestion
 
 def display_recipe(recipe):
     """Display one recipe in a readable format."""
@@ -63,6 +62,15 @@ def choose_favorite(recipes):
         print("Recipe added to favorites.")
     else:
         print("Invalid selection or recipe already favorited.")
+def suggest_meal(recipes):
+    """Display a randomly selected recipe."""
+    recipe = random_meal_suggestion(recipes)
+
+    if recipe is None:
+        print("No recipes available.")
+        return
+
+    display_recipe(recipe)
 
 
 def main():
@@ -79,7 +87,8 @@ def main():
         print("4. View recipe details")
         print("5. Add recipe to favorites")
         print("6. View favorites")
-        print("7. Exit")
+        print("7. Random meal suggestion")
+        print("8. Exit")
 
         choice = input("\nChoose an option: ").strip()
 
@@ -98,6 +107,8 @@ def main():
         elif choice == "6":
             list_recipes(filter_by_category(recipes, "Favorite"))
         elif choice == "7":
+            suggest_meal(recipes)
+        elif choice == "8":
             print("Goodbye!")
             break
         else:
